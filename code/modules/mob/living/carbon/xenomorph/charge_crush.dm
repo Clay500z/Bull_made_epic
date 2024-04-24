@@ -342,7 +342,7 @@
 	speed_per_step = 0.15
 	steps_for_charge = 5
 	max_steps_buildup = 10
-	crush_living_damage = 15
+	crush_living_damage = 20
 	plasma_use_multiplier = 2
 
 
@@ -565,6 +565,8 @@
 			Paralyze(CHARGE_SPEED(charge_datum) * 2 SECONDS)
 		if(CHARGE_BULL_HEADBUTT)
 			Paralyze(CHARGE_SPEED(charge_datum) * 2 SECONDS)
+		if(CHARGE_BULL)
+			Paralyze(CHARGE_SPEED(charge_datum) * 0.2 SECONDS)
 
 	if(anchored)
 		charge_datum.do_stop_momentum(FALSE)
